@@ -1,0 +1,146 @@
+.nav {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 4.5rem;
+    background-color: var(--color-primary);
+}
+
+.container {
+    margin: 0 auto;
+    width: var(--container-width-lg);
+    max-width: 100%;
+}
+
+
+
+.nav__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__links {
+    position: relative;
+    display: flex;
+    gap: 3.5rem;
+
+}
+
+.nav__toggle-btn {
+    display: none;
+}
+
+.nav__links a {
+    color: var(--color-gray-100);
+    transition: var(--transition);
+}
+
+.nav__links a:hover {
+    color: var(--secondary);
+}
+
+.active {
+    position: relative;
+
+}
+
+.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 180%;
+    left: calc(50% - 0.6rem);
+    background: var(--color-primary);
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: rotate(45deg);
+
+
+}
+
+
+@media screen and (max-width:1024px) {
+    .nav__toggle-btn {
+        display: flex;
+        font-size: 2rem;
+        background: transparent;
+        color: var(--color-gray-100);
+        border: none;
+        cursor: pointer;
+
+    }
+
+
+    .nav__links {
+        position: absolute;
+        top: 160%;
+        right: 0;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .show_menu {
+        display: flex;
+    }
+
+    .hide_menu {
+        display: none;
+    }
+
+
+    .nav__links li {
+        width: 100%;
+        box-shadow: -2rem 1rem 4rem rgba(6, 6, 6, 0.6);
+        animation: navAnimation 600ms ease forwards;
+        transform-origin: top;
+    }
+    .nav__links li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .nav__links li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .nav__links li:nth-child(4){
+        animation-delay: 600ms;
+    }
+    .nav__links li:nth-child(5){
+        animation-delay: 800ms;
+    }
+    .nav__links li:nth-child(6){
+        animation-delay: 1s;
+    }
+
+    @keyframes navAnimation {
+        from{
+            transform:  rotateX(90deg);
+            opacity: 0;
+        };
+        to{
+            transform:   rotateX(0deg);
+            opacity:1;
+        }
+    }
+
+    .nav__links li a {
+        display: block;
+        width: 100%;
+        padding: 1rem 3rem 1rem 3rem;
+        background: var(--color-primary);
+
+    }
+
+    .nav__links li .active,
+    .active::after {
+        display: none;
+    }
+
+
+}

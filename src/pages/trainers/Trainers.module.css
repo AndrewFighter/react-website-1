@@ -1,0 +1,164 @@
+.trainers-container {
+    min-height: 100vh;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 1.5rem;
+}
+
+.trainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 300px;
+    height: 340px;
+    padding: 2rem 1rem;
+}
+
+.trainer-img {
+    height: 50%;
+    width: 90%;
+}
+
+.trainer-img img {
+    height: 100%;
+    border-radius: 0 2rem;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(1);
+    transition: var(--transtion);
+}
+
+.trainer-img img:hover {
+    transform: scale(1.03);
+}
+
+.trainer h3 {
+    margin-top: .5rem;
+}
+
+.trainer p {
+    margin-top: .5rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.img-socials {
+    margin-top: .5rem;
+    display: flex;
+    gap: .2rem;
+
+}
+
+.img-socials a {
+    background: transparent;
+    border: 2px solid transparent;
+    padding: .5rem;
+    font-size: 1.4rem;
+    border-radius: 100%;
+    transition: var(--transtion);
+}
+
+.img-socials a:hover {
+    border-color: var(--color-gray-100);
+
+}
+
+.img-socials a:hover svg {
+    fill: var(--color-gray-100);
+}
+
+
+@media screen and (max-width:1150px) {
+    .trainers-container {
+        min-height: 200vh;
+        margin-top: 4rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+
+    .trainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 350px;
+        height: 430px;
+        padding: 2rem 1rem;
+    }
+
+    .trainer h3 {
+        margin-top: 2rem;
+    }
+
+    .trainer p{
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .img-socials {
+        margin-top: 1.5rem;
+       
+    
+    }
+
+    .img-socials a {
+        background: transparent;
+        border: 2px solid transparent;
+        padding: .5rem;
+        font-size: 1.7rem;
+        border-radius: 100%;
+        transition: var(--transtion);
+    }
+}
+
+@media screen and (max-width:875px) {
+    .trainers-container {
+        min-height: 320vh;
+        margin-top: 4rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
+        
+    }
+
+    .trainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 300px;
+        height: 360px;
+        padding: 2rem 1rem;
+    }
+
+    .trainer h3 {
+        margin-top: 1rem;
+    }
+
+    .trainer p{
+        margin-top: .5rem;
+        font-size: .9rem;
+    }
+
+    .img-socials {
+        margin-top: 0.5rem;
+       
+    
+    }
+
+    .img-socials a {
+        background: transparent;
+        border: 2px solid transparent;
+        padding: .5rem;
+        font-size: 1.3rem;
+        border-radius: 100%;
+        transition: var(--transtion);
+    }
+}

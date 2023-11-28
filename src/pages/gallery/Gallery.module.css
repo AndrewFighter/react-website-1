@@ -1,0 +1,36 @@
+.gallery-container {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    
+
+
+}
+
+.gallery-container  article img {
+    max-width: 300px;
+    transform: scale(1);
+    transition: var(--transtion);
+    border: 1rem solid transparent;
+}
+
+.gallery-container  article img:hover {
+    border-color:var(--color-gray-500) ;
+    transform: scale(1.025);
+}
+
+@media screen and (max-width:1024px){
+    .gallery-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+@media screen and (max-width:740px){
+    .gallery-container{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.6rem;
+    background: var(--color-gray-500);
+    border: 2px solid transparent;
+    border-radius: 0 3rem 0 3rem;
+    padding: 3rem 2rem;
+    cursor: pointer;
+    transition: var(--transtion);
+
+}
+
+.card:hover {
+    background: transparent;
+    border-color: var(--color-gray-400);
+}
+
+.card span {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding:0.8rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    background: var(--color-primary);
+    color: var(--color-gray-100);
+    transition: var(--transtion);
+}
+
+.card:hover span {
+    background: var(--secondary);
+    color: var(--color-gray-600);
+}
+
+.card small{
+    text-align: center;
+    margin-bottom: .7rem;
+}
+
+.card a{
+    display:flex;
+    align-items: center;
+    gap:.3rem;
+}
+
+

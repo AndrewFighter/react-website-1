@@ -1,0 +1,15 @@
+.NotFound-container{
+    margin-top: 5rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+}
+
+.NotFound-container h2{
+    margin-bottom: -7rem;
+}
+
+.NotFound-container a{
+    color: var(--color-gray-100);
+    margin-top: -1rem;
+}

@@ -1,0 +1,70 @@
+.plan{
+    margin-bottom: 4rem;
+
+}
+
+
+
+.plans-container{
+    margin-top: 3rem;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:3rem;
+}
+
+.plan h1{
+    display: flex;
+    gap:2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan h1 span{
+    line-height: 200%;
+    padding: 0;
+    display:inline-block;
+    width:55px;
+    color: gold;
+    background: transparent;
+}
+
+.plan small{
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: .1rem;
+}
+
+.disabled{
+    color: var(--color-gray-400);
+}
+
+.plan button{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px){
+    .plans-container{
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem;
+    }
+}
+@media screen and (max-width:800px){
+    
+    .plans-container{
+        margin-top: 2rem;
+        width:60%;
+        margin:0 auto;
+        grid-template-columns: 1fr;
+    }
+
+    .plans-container article{
+        
+        margin-top: 2rem;
+    }
+
+
+}
